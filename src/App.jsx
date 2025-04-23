@@ -1,15 +1,16 @@
+import { Provider } from "react-redux";
 import MainContainer from "./components/MainContainer";
 import Navbar from "./components/Navbar";
+import appStore from "./utils/appStore";
 
 function App() {
   return (
-    <>
-      <Navbar />
-      <MainContainer />
-      <div className="text-3xl font-bold underline flex justify-center items-center h-screen">
-        YOUTUBE COLNE
+    <Provider store={appStore}>
+      <div>
+        <Navbar />
+        <MainContainer />
       </div>
-    </>
+    </Provider>
   );
 }
 
