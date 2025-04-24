@@ -1,6 +1,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { toogleMenu } from "../utils/appSlice";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const dispath = useDispatch();
@@ -16,11 +17,13 @@ const Navbar = () => {
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/640px-Hamburger_icon.svg.png"
           alt="menu"
         />
-        <img
-          className="h-8 mx-2 cursor-pointer"
-          src="https://cdnlogo.com/logos/y/73/youtube.svg"
-          alt="logo"
-        />
+        <Link to="/">
+          <img
+            className="h-8 mx-2 cursor-pointer"
+            src="https://cdnlogo.com/logos/y/73/youtube.svg"
+            alt="logo"
+          />
+        </Link>
       </div>
       <div className="col-span-10 flex justify-center">
         <input
