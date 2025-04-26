@@ -10,6 +10,14 @@ export const FILTER_LIST = [
   "Cooking",
   "Cricket",
   "Live",
+  "Movies",
+  "Comedy",
+  "Music",
+  "Fashion",
+  "React",
+  "Cooking",
+  "Cricket",
+  "Live",
 ];
 export const YOUTUBE_SEARCH_API =
   "http://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q=";

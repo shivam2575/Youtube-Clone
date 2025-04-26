@@ -15,3 +15,16 @@ If you are developing a production application, we recommend using TypeScript wi
 
 - Hosted on Firebase
 - Integrated Tailwind CSS
+- Added homepage skeleton
+- Added Navbar component
+- Added Sidebar component
+- Added Maincontainer component
+- Added data using Youtube Data APIs
+- Added .env file for secrets
+- Styled home page of the app
+- Added Watch page component
+- Styled Watch page component
+- Added appSlice to show and hide sidebar
+- Added search suggestions feature with debounce
+- Added searchSlice to store the cached search data
+- Added caching for search suggestions

@@ -4,7 +4,7 @@ import Button from "./Button";
 
 const ButtonList = () => {
   return (
-    <div className="p-2 m-2">
+    <div className="p-2 m-2 overflow-x-scroll flex">
       {FILTER_LIST.map((name) => (
         <Button key={name} name={name} />
       ))}

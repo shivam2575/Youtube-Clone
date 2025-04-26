@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { toogleMenu } from "../utils/appSlice";
 import { Link } from "react-router-dom";
 import { YOUTUBE_SEARCH_API } from "../utils/constants";
+import { cacheResults } from "../utils/searchSlice";
 
 const Navbar = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [searchList, setSearchList] = useState([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
   const dispath = useDispatch();
+  const searchCache = useSelector((store) => store.search);
   const toogleMenuHandler = () => {
     dispath(toogleMenu());
   };
@@ -16,10 +18,22 @@ const Navbar = () => {
     const response = await fetch(YOUTUBE_SEARCH_API + searchQuery);
     const json = await response.json();
     setSearchList(json[1]);
+    // update cache
+    dispath(
+      cacheResults({
+        [searchQuery]: [...json[1]],
+      })
+    );
     console.log(searchList);
   };
   useEffect(() => {
-    const timer = setTimeout(() => getSearchSuggestions(), 200);
+    const timer = setTimeout(() => {
+      if (searchCache[searchQuery]) {
+        setSearchList(searchCache[searchQuery]);
+      } else {
+        getSearchSuggestions();
+      }
+    }, 200);
     return () => {
       clearTimeout(timer);
     };
