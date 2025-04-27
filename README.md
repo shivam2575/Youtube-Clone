@@ -28,3 +28,15 @@ If you are developing a production application, we recommend using TypeScript wi
 - Added search suggestions feature with debounce
 - Added searchSlice to store the cached search data
 - Added caching for search suggestions
+- Added live chat component
+- Added API polling feature for live chat
+
+# TO-DO
+
+- Make it responsive
+- Add light and dark theme
+- Add unit testing
+- Add authentication using firebase
+- Infinite scrolling
+- Optimize styling
+- Add search functionality

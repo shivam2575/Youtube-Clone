@@ -65,3 +65,4 @@ export const COMMENTS = [
     replies: [],
   },
 ];
+export const OFFSET_CHAT_LIMIT = 50;
