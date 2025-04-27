@@ -29,29 +29,29 @@ export const COMMENTS = [
   {
     id: "1",
     name: "Shivam",
-    comment: "Rajni is the most beautiful girl in the universe.!!!!",
+    comment: "Lorem ipsum content vite du..!!",
     replies: [],
   },
   {
     id: "2",
     name: "Shivam",
-    comment: "Rajni is the most beautiful girl in the universe.!!!!",
+    comment: "Lorem ipsum content vite du..!!",
     replies: [
       {
         id: "2.1",
         name: "Shivam",
-        comment: "Rajni is the most beautiful girl in the universe.!!!!",
+        comment: "Lorem ipsum content vite du..!!",
         replies: [],
       },
       {
         id: "2.2",
         name: "Shivam",
-        comment: "Rajni is the most beautiful girl in the universe.!!!!",
+        comment: "Lorem ipsum content vite du..!!",
         replies: [
           {
             id: "2.2.1",
             name: "Shivam",
-            comment: "Rajni is the most beautiful girl in the universe.!!!!",
+            comment: "Lorem ipsum content vite du..!!",
             replies: [],
           },
         ],
@@ -61,7 +61,7 @@ export const COMMENTS = [
   {
     id: "3",
     name: "Shivam",
-    comment: "Rajni is the most beautiful girl in the universe.!!!!",
+    comment: "Lorem ipsum content vite du..!!",
     replies: [],
   },
 ];

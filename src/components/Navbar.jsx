@@ -24,7 +24,6 @@ const Navbar = () => {
         [searchQuery]: [...json[1]],
       })
     );
-    console.log(searchList);
   };
   useEffect(() => {
     const timer = setTimeout(() => {

@@ -35,7 +35,6 @@ const LiveChat = () => {
       <form
         onSubmit={(e) => {
           e.preventDefault();
-          console.log(chatInput);
           dispatch(
             addMessage({
               name: "Shivam",
