@@ -3,8 +3,8 @@ import CommentsList from "./CommentsList";
 
 const CommentsContainer = () => {
   return (
-    <div className="m-5 p-2 w-[1000px]">
-      <h1 className="font-bold text-2xl">Comments:</h1>
+    <div className="m-3 p-1 md:m-5 md:p-2 md:w-[1000px]">
+      <h1 className="font-bold text-xl md:text-2xl">Comments:</h1>
       <CommentsList comments={COMMENTS} />
     </div>
   );

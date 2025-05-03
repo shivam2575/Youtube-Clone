@@ -22,8 +22,8 @@ const LiveChat = () => {
     return () => clearInterval(interval);
   }, []);
   return (
-    <div className="mx-2 p-2 h-[500px] border rounded-lg flex flex-col">
-      <div className="h-[470px] overflow-y-scroll flex flex-col-reverse">
+    <div className="mx-2 p-2 md:h-[500px] border rounded-lg flex flex-col">
+      <div className="md:h-[470px] h-36 overflow-y-scroll flex flex-col-reverse">
         {chatMessages.map((message, index) => (
           <ChatMessage
             key={index}
@@ -43,10 +43,10 @@ const LiveChat = () => {
           );
           setChatInput("");
         }}
-        className="m-2 p-2 border rounded-lg flex"
+        className="md:m-2 md:p-2 m-1 p-1 border rounded-lg flex"
       >
         <input
-          className="p-2 mx-2 w-[80%]"
+          className="p-1 md:p-2 mx-2 w-[80%]"
           type="text"
           placeholder="Type your message."
           value={chatInput}

@@ -38,17 +38,17 @@ const Navbar = () => {
     };
   }, [searchQuery]);
   return (
-    <div className="grid grid-flow-col p-4 m-2 shadow-lg">
+    <div className="grid grid-flow-col p-2 md:p-4 m-2 shadow-lg">
       <div className="flex col-span-1 items-center">
         <img
           onClick={toogleMenuHandler}
-          className="h-8 mx-2 cursor-pointer"
+          className="h-4 md:h-8 md:mx-2 cursor-pointer"
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/640px-Hamburger_icon.svg.png"
           alt="menu"
         />
         <Link to="/">
           <img
-            className="h-8 mx-2 cursor-pointer"
+            className="h-4 md:h-8 mx-2 cursor-pointer"
             src="https://cdnlogo.com/logos/y/73/youtube.svg"
             alt="logo"
           />
@@ -57,16 +57,16 @@ const Navbar = () => {
       <div className="col-span-10 flex flex-col justify-center items-center">
         <div className="w-full flex justify-center items-center">
           <input
-            className="border border-gray-400 p-2 w-1/2 rounded-l-full"
+            className="h-4 text-sm py-1 md:text-lg md:h-full border border-gray-400 px-2 md:p-2 w-1/2 rounded-l-full"
             type="text"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             onFocus={() => setShowSuggestions(true)}
             onBlur={() => setShowSuggestions(false)}
           />
-          <button className="border border-gray-400 px-4 py-2 bg-gray-200 rounded-r-full cursor-pointer">
+          <button className="h-4 md:h-full border border-gray-400 px-2 md:px-4 md:py-2 bg-gray-200 rounded-r-full cursor-pointer">
             <img
-              className="h-6 bg-transparent"
+              className="h-2 md:h-6 bg-transparent"
               src="https://cdn-icons-png.flaticon.com/512/5680/5680244.png"
               alt="search button"
             />
@@ -75,9 +75,12 @@ const Navbar = () => {
 
         {showSuggestions && searchList.length > 0 && (
           <div className="w-full relative flex justify-center ">
-            <ul className="absolute w-1/2 bg-white border border-gray-400 rounded-xl shadow-lg mr-14 p-2">
+            <ul className="absolute w-1/2 bg-white border border-gray-400 rounded-xl shadow-lg mr-7 md:mr-14 p-2">
               {searchList.map((s) => (
-                <li key={s} className="py-2 shadow-sm hover:bg-gray-200">
+                <li
+                  key={s}
+                  className="text-sm md:text-lg py-2 shadow-sm hover:bg-gray-200"
+                >
                   🔍 {s}
                 </li>
               ))}
@@ -87,7 +90,7 @@ const Navbar = () => {
       </div>
       <div className="col-span-1 flex items-center">
         <img
-          className="h-8 cursor-pointer"
+          className="h-6 md:h-8 cursor-pointer"
           src="https://icons.veryicon.com/png/o/internet--web/prejudice/user-128.png"
           alt="user"
         />
